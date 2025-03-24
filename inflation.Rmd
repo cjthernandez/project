@@ -9,8 +9,6 @@ repro:
     - tidyverse
     - lubridate
     - aaronpeikert/repro@fc7e884
-    - lcmm
-    - lme4
   scripts:
     - R/prepare_inflation.R
   data:
