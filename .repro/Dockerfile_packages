@@ -1,0 +1,8 @@
+RUN install2.r --error --skipinstalled \ 
+  here \ 
+  lcmm \ 
+  lme4 \ 
+  lubridate \ 
+  tidyverse
+RUN installGithub.r \ 
+  aaronpeikert/repro@fc7e884
