@@ -41,8 +41,6 @@ For this dataset the Bank of England asked `r prettyNum(nrow(inflation), big.mar
 The survey has run quarterly since `r min(inflation$year)`.
 
 ```{r}
-knitr::opts_chunk$set(echo = TRUE)
-
 inflation %>% 
   group_by(date) %>% 
   summarise(across(c(perception, expectation),
@@ -52,6 +50,10 @@ inflation %>%
   ungroup() %>% 
   ggplot() +
   geom_line(aes(date, value, color = name)) +
+  theme_minimal() +
+  ylab("subjective inflation in %-points") +
+  labs(color = "") +
+  theme(legend.position = c(.1, .9)) +
   NULL
 ```
 
